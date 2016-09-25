@@ -1,5 +1,8 @@
 package io.github.qetennyson.tictactoe;
 
+import android.view.View;
+import android.widget.TextView;
+
 import java.util.Random;
 
 /**
@@ -8,22 +11,22 @@ import java.util.Random;
 public class TicTacToeGame {
 
 
-    private char toeBoard[];
+    private String toeBoard[];
     private static int BOARD_SIZE = 9;
 
-    public static char PLAYER_1 = 'X';
-    public static char PLAYER_2 = 'O';
-    public static char EMPTY = ' ';
+    public static String PLAYER_1 = "X";
+    public static String PLAYER_2 = "O";
+    public static String EMPTY = " ";
 
-    private Random toeRand;
 
     public TicTacToeGame(){
 
-        toeBoard = new char[BOARD_SIZE];
+        toeBoard = new String[BOARD_SIZE];
 
         for (int i=0; i<BOARD_SIZE; i++){
             toeBoard[i] = EMPTY;
         }
+
 
     }
 
@@ -44,14 +47,29 @@ public class TicTacToeGame {
             System.out.println("Player 1 has Won!");
         } else if (checkWinner() == 3) {
             System.out.println("Player 2 has Won!");
-        } else if (checkWinner() == 0) {
-            // need to figure out how to alternate players
         } else if (checkWinner() == 1) {
-            System.out.println("The Game has Tied");
+            System.out.println("The game is tied");
         }
     }
 
+    /*public void setPlayer(){
+        while (checkWinner() == 0){
+            if (player == PLAYER_1){
+                player = PLAYER_2;
+            } else {
+                player = PLAYER_1;
+            }
+        }
+    }*/
 
+    public void crazyShit(View v){
+
+        TextView view = (TextView)v;
+
+        for (int i = 0; i <= 8; i++){
+            toeBoard[i] = view.getText().toString();
+        }
+    }
     //this method checks the board for all possible win conditions
     public int checkWinner(){
         //this loop checks all rows
@@ -80,20 +98,20 @@ public class TicTacToeGame {
                 return 3;
         }
 
-        //this loop checks the diagonals
+        //this checks the diagonals
         if((toeBoard[0] == PLAYER_1 &&
                 toeBoard[4] == PLAYER_1 &&
                 toeBoard[8] == PLAYER_1) ||
-                toeBoard[2] == PLAYER_1 &&
-                        toeBoard[4] == PLAYER_1 &&
-                        toeBoard[6] == PLAYER_1)
+                    toeBoard[2] == PLAYER_1 &&
+                    toeBoard[4] == PLAYER_1 &&
+                    toeBoard[6] == PLAYER_1)
             return 2;
         if((toeBoard[0] == PLAYER_2 &&
                 toeBoard[4] == PLAYER_2 &&
                 toeBoard[8] == PLAYER_2) ||
-                toeBoard[2] == PLAYER_2 &&
-                        toeBoard[4] == PLAYER_2 &&
-                        toeBoard[6] == PLAYER_2)
+                    toeBoard[2] == PLAYER_2 &&
+                    toeBoard[4] == PLAYER_2 &&
+                    toeBoard[6] == PLAYER_2)
             return 3;
 
         //checks for open spaces on the board
