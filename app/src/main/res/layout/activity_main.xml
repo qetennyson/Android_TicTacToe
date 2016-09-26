@@ -11,12 +11,6 @@
     tools:context="io.github.qetennyson.tictactoe.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:id="@+id/textView" />
-
-    <TextView
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:id="@+id/textView0"
@@ -24,7 +18,13 @@
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/textView4"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
 
     <TextView
@@ -34,7 +34,13 @@
         android:layout_alignTop="@+id/textView0"
         android:layout_toEndOf="@+id/textView0"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="120dp"
@@ -43,7 +49,13 @@
         android:layout_alignTop="@+id/textView1"
         android:layout_toEndOf="@+id/textView1"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="120dp"
@@ -52,7 +64,13 @@
         android:layout_below="@+id/textView0"
         android:layout_alignEnd="@+id/textView0"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="120dp"
@@ -61,7 +79,13 @@
         android:layout_alignTop="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="120dp"
@@ -70,7 +94,13 @@
         android:layout_below="@+id/textView2"
         android:layout_toEndOf="@+id/textView1"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="120dp"
@@ -79,7 +109,13 @@
         android:layout_below="@+id/textView3"
         android:layout_alignEnd="@+id/textView3"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="120dp"
@@ -88,25 +124,39 @@
         android:layout_alignTop="@+id/textView6"
         android:layout_centerHorizontal="true"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:id="@+id/textView8"
-        android:layout_alignTop="@+id/textView7"
-        android:layout_alignParentEnd="true"
         android:onClick="onClick"
-        android:text=" "/>
+        android:text=" "
+        android:textSize="80dp"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_toEndOf="@+id/stateView"
+        android:backgroundTint="#b0a3e5"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:background="#eb4346e0"
+        android:padding="10dp" />
 
-    <Button
+    <!-- button is intended to run the clearState method, but having trouble binding the onClick event !-->
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEW GAME"
-        android:id="@+id/newGameButton"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:onClick="newGameListener"
-        />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" "
+        android:id="@+id/stateView"
+        android:layout_toStartOf="@+id/textView2"
+        android:layout_alignBaseline="@+id/textView0"
+        android:layout_alignBottom="@+id/textView0" />
 
 </RelativeLayout>

@@ -66,14 +66,15 @@ public class MainActivity extends AppCompatActivity{
 
             TextView button = (TextView)v;
 
-            if (player == 1) {
+            if (player == 2) {
                 button.setText("O");
-            } else if (player == 2) {
+            } else if (player == 1) {
                 button.setText("X");
             }
 
-            newGame.crazyShit(v);
+            newGame.textParser(v);
             newGame.gameState();
+
 
             if (player == 1) {
                 player = 2;
